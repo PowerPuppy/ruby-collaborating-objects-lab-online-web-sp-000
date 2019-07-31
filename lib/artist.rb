@@ -19,7 +19,6 @@ end
 
   def print_song
     self.all{|title| puts title if artist.name == self}
-
   end
 
 end
