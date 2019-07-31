@@ -5,6 +5,7 @@ class Artist
   def initalize(name)
     @name = name
     @@all << self
+    @song = []
   end
 
   def self.all
