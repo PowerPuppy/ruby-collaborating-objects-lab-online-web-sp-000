@@ -2,7 +2,7 @@ class Artist
   attr_accessor :name
   @@all = []
 
-  def initalize(name)
+  def initalize
     @name = name
     save
     @song = []
@@ -13,8 +13,7 @@ def save
 end
 
 def add_song(title)
-
-
+  
 end
 
   def self.all
