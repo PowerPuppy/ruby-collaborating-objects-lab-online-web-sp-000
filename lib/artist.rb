@@ -8,6 +8,10 @@ class Artist
     @song = []
   end
 
+def save
+  @@all <<self
+end
+
 def add_song(title)
 
 
