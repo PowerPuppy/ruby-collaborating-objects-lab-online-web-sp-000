@@ -9,8 +9,8 @@ class Artist
   end
 
 def add_song(title)
-  
-  
+
+
 end
 
   def self.all
@@ -19,7 +19,7 @@ end
 
   def print_song
     self.all{|title| puts title if artist.name == self}
-    
+
   end
 
 end
