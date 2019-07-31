@@ -1,31 +1,31 @@
-class Artist 
+class Artist
   @@all = []
   @@passer = {}
-  attr_accessor :name 
+  attr_accessor :name
 
   def initialize(name)
-    @name = name  
+    @name = name
     @songs = []
     @@all << self
     @@passer[name] = self
-  end 
+  end
 
   def self.create_artist(name)
     artist = Artist.new(name)
     artist
   end
-    
+
   def add_song(song)
-    @songs << song 
-    song.artist =  self 
-  end 
+    @songs << song
+    song.artist =  self
+  end
 
   def self.find_or_create_by_name(name)
     @@passer.keys.include?(name) ? @@passer[name] : Artist.create_artist(name)
-  end 
+  end
 
-  def print_songs 
-    @songs.each { |song| puts song.name } 
+  def print_songs
+    @songs.each { |song| puts song.name }
   end
 
   def songs
@@ -33,10 +33,10 @@ class Artist
   end
 
   def save
-    
-  end 
+
+  end
 
   def self.all
     @@all
-  end 
-end 
+  end
+end
